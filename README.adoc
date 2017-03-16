@@ -2,10 +2,12 @@
 * World:Bu terim, robotlar ve nesneler (binalar, tablolar ve ışıklar gibi) ve gökyüzü, ortam ışığı ve fizik özellikleri de dahil olmak üzere genel parametreleri tanımlamak için kullanılır.
 * Static:Statik olarak işaretlenmiş varlıklar (SDF'de <static> true </ statik> öğesine sahip olanlar) yalnızca çarpışma geometrisine sahip nesnelerdir. Taşınması amaçlanmayan tüm nesneler statik olarak işaretlenmelidir, bu da bir performans artışıdır.
 *Dynamic:Dinamik olarak işaretlenen varlıklar (<statik> öğeyi yoksayar veya SDF'de yanlış ayarlar), atalet ve çarpışma geometrisine sahip nesnelerdir.
-==Kuruluş
+
+== Kuruluş
 * Gazebonun kurulu olduğundan emin olun.
 * Gazeboyu çalıştırın, sadece bir yer düzlemi olan bir dünya görmelisiniz.
-image :: 1.png
+
+image::a
 
 
 == Nesneleri Ekleme
@@ -38,7 +40,7 @@ Kutular, küreler ve silindirler, oluşturma penceresinin üzerindeki uygun simg
 * Ayrıca nesnenin üzerine tıklayıp x-y düzleminde ilerlemek için sürükleyebilirsiniz. Nesneyi sürüklerken x, y veya z tuşlarına basıp tutarak nesnenin hangi eksene ilerleyeceğini kontrol edebilirsiniz.
 * Hareketi 1 metre ızgaraya kenetlemek için Ctrl tuşunu basılı tutabilirsiniz.
 * Nesne dünyayla hizalanmıyorsa (bir sonraki açıklama döndürme aracını kullandıktan sonra), Shift tuşunu basılı tutarak görsel işaretleyiciler dünyaya göre hizalanır ve dünya koordinatlarına tercüme edilebilir.
-* 
+
 Nesneleri şimdi farklı bir yapılandırmaya hareket ettirmeyi deneyin.
 == Döndürme
 * Döndürme aracı, bir modeli x, y ve z eksenleri etrafında yönlendirmenize olanak tanır. Bu aracı şimdi seçin (veya r tuşuna basın) taşımak istediğiniz nesneyi tıklayın. Nesnenin üzerinde x, y ve z eksenlerinin etrafında döndürülebilmenizi sağlayan üç halkalı şekilli görsel işaretleyici nesne üzerinde görünecektir.
