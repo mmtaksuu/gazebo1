@@ -1,0 +1,66 @@
+== Terminoloji
+* World:Bu terim, robotlar ve nesneler (binalar, tablolar ve ışıklar gibi) ve gökyüzü, ortam ışığı ve fizik özellikleri de dahil olmak üzere genel parametreleri tanımlamak için kullanılır.
+* Static:Statik olarak işaretlenmiş varlıklar (SDF'de <static> true </ statik> öğesine sahip olanlar) yalnızca çarpışma geometrisine sahip nesnelerdir. Taşınması amaçlanmayan tüm nesneler statik olarak işaretlenmelidir, bu da bir performans artışıdır.
+*Dynamic:Dinamik olarak işaretlenen varlıklar (<statik> öğeyi yoksayar veya SDF'de yanlış ayarlar), atalet ve çarpışma geometrisine sahip nesnelerdir.
+==Kuruluş
+* Gazebonun kurulu olduğundan emin olun.
+* Gazeboyu çalıştırın, sadece bir yer düzlemi olan bir dünya görmelisiniz.
+image :: 1.png
+
+
+== Nesneleri Ekleme
+* Gazebo, Gazebo'ya nesneler eklemek için iki mekanizma sunmaktadır.
+* Birincisi, oluşturma penceresinin üzerinde bulunan basit şekiller kümesidir.
+
+* İkinci model veritabanı, sol üst köşedeki Ekle sekmesini seçerek erişilebilir.
+
+== Basit Şekiller Ekleme
+Kutular, küreler ve silindirler, oluşturma penceresinin üzerindeki uygun simgeye tıklayarak dünyaya eklenebilir. Her şekil birim büyüklüğündedir:
+* Kutu:1*1*1 metre
+* Küre:1 metre çap
+* Silindir:1 metre çap,1 metre yükseklik
+* Kutu simgesini seçin ve sonra farenizi oluşturma penceresinin üzerine getirin. Farenizle hareket eden bir kutu görürsünüz. Kutunun bulunduğu konumdan memnun olduğunuzda sol tıklayın.
+*Küre ve silindir için de aynı prosedürü tekrarlayın. Buna benzer bir dünya ile bitmelisiniz:
+
+
+== Model veritabanından model ekleme
+* Gazebo'nun model veritabanı, robotlar, tablolar ve bina da dahil olmak üzere her türlü modelin deposudur.
+* 1.Model veritabanına erişmek için sol üst köşedeki Ekle sekmesini seçin.
+* Model listesi mevcut konumlarına göre bölümlere ayrılmıştır. Her bölüm bir yol veya URI ile etiketlenmiştir. Uzak bir sunucuda bulunan bir nesneyi seçmek, modelin ~ / .gazebo / modellerde indirilmesini ve depolanmasına neden olacaktır.
+* 2.Dünyaya çeşitli modeller eklemeyi deneyin. Bazıları büyük olabileceğinden, modelleri indirirken sabırlı olun.
+* 3.Eklemeye karar verdiğiniz modellere bağlı olarak, aşağıdakine benzer bir şey yapmanız gerekir:
+
+== Pozisyon Modelleri
+* Her modelin pozu çevirme ve döndürme araçları ile değiştirilebilir:
+
+== Çeviri
+* Çeviri aracı, nesneyi x, y ve z eksenleri boyunca hareket ettirmenize olanak tanır. Bu aracı şimdi seçin (veya t tuşuna basın) taşımak istediğiniz nesneyi tıklayın. Nesnenin üzerinde x, y ve z yönlerinde hareket etmenize izin veren üç eksenli bir görsel işaretleyici nesne üzerinde görünecektir.
+* Ayrıca nesnenin üzerine tıklayıp x-y düzleminde ilerlemek için sürükleyebilirsiniz. Nesneyi sürüklerken x, y veya z tuşlarına basıp tutarak nesnenin hangi eksene ilerleyeceğini kontrol edebilirsiniz.
+* Hareketi 1 metre ızgaraya kenetlemek için Ctrl tuşunu basılı tutabilirsiniz.
+* Nesne dünyayla hizalanmıyorsa (bir sonraki açıklama döndürme aracını kullandıktan sonra), Shift tuşunu basılı tutarak görsel işaretleyiciler dünyaya göre hizalanır ve dünya koordinatlarına tercüme edilebilir.
+* 
+Nesneleri şimdi farklı bir yapılandırmaya hareket ettirmeyi deneyin.
+== Döndürme
+* Döndürme aracı, bir modeli x, y ve z eksenleri etrafında yönlendirmenize olanak tanır. Bu aracı şimdi seçin (veya r tuşuna basın) taşımak istediğiniz nesneyi tıklayın. Nesnenin üzerinde x, y ve z eksenlerinin etrafında döndürülebilmenizi sağlayan üç halkalı şekilli görsel işaretleyici nesne üzerinde görünecektir.
+* Hareketi bu eksenlerden birine kısıtlamak için sürüklerken nesnenin kendisini tıklamanız ve x, y veya z tuşlarını basılı tutmanız da mümkündür.
+* Hareketi 45 derece basamaklı hale getirmek için Ctrl tuşunu basılı tutabilirsiniz.
+* Nesne dünyayla hizalanmıyorsa, Shift tuşunu basılı tutarak görsel işaretleyiciler dünyayla hizalı görünebilir ve dünya eksenleri etrafında döndürebilirsiniz.
+* Nesneleri farklı bir yapılandırmaya çevirmeyi deneyin.
+== Ölçek
+* Ölçek aracı, bir modeli x, y ve z yönlerinde yeniden boyutlandırmanıza izin verir. Şu anda ölçek aracı sadece basit şekillerle, örneğin kutu, silindir ve küre ile çalışmaktadır. Bu aracı şimdi seçin (veya s tuşuna basın) basit bir şekle tıklayın. Nesnenin üzerinde üç eksenli bir görsel işaretleyici görüntülenir; böylece nesnenin x, y ve z boyutlarını ölçeklendirebilirsiniz.
+* Ölçeklemeyi bu eksenlerden biriyle sınırlandırmak için sürüklerken yalnızca nesnenin üzerine tıklayabilir ve x, y veya z tuşlarını basılı tutabilirsiniz.
+* 1 metrelik artışlarla ölçeklemek için Ctrl tuşunu basılı tutabilirsiniz.
+* Basit şekilleri farklı boyutlara ölçeklendirmeyi deneyin.
+== Modelleri Sil
+* Modeller de seçilerek ve Sil tuşuna basılarak veya bir modeli sağ tıklatıp Sil'i seçerek silinebilir.
+* Birkaç model silmeyi deneyin.
+== Saving a World
+* Worldden memnun olduğunuzda dosya menüsünden tasarruf edebilirsiniz.
+* Şimdi Dosya menüsünü seçin ve Farklı Kaydet'i seçin.
+* Yeni bir dosya adı girmenizi isteyen bir pop-up görünür. My_world.sdf dosyasını girin ve tamam'ı tıklayın.
+== Loading a World
+* Kaydedilen bir dünya komut satırına yüklenebilir:
+* Gazebo my_world.sdf
+* Dosya adı geçerli çalışma dizininde olmalıdır veya tam yolu belirtmelisiniz.
+== Next
+
